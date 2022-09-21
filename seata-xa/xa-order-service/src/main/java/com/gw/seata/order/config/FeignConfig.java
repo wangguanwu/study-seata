@@ -1,4 +1,4 @@
-package com.gw.seata.config;
+package com.gw.seata.order.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Bean;

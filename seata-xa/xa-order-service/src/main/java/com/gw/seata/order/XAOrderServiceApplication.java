@@ -1,4 +1,4 @@
-package com.gw.seata;
+package com.gw.seata.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
