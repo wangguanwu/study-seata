@@ -1,19 +1,18 @@
-package com.gw.seata.order.vo;
+package com.gw.seata.common.entity;
 
 import lombok.Data;
 
 /**
  * @author guanwu
- * @created 2022/9/21 22:31
- */
+ * @created on 2022-09-22 11:22:14
+ **/
 
 @Data
-public class OrderVo {
+public class Order {
+    private Integer id;
     private String userId;
-    /**商品编号**/
     private String commodityCode;
-
     private Integer count;
-
     private Integer money;
+    private Integer status;
 }

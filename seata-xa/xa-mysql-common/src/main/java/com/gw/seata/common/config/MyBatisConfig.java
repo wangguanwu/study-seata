@@ -18,7 +18,7 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-@MapperScan("com.gw.common.mapper")
+@MapperScan("com.gw.seata.common.mapper")
 public class MyBatisConfig {
     @Bean
     @ConfigurationProperties(prefix="spring.datasource.druid")

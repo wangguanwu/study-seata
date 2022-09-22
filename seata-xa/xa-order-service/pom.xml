@@ -12,7 +12,6 @@
 
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>xa-order-service</artifactId>
-    <packaging>jar</packaging>
     <name>xa-order-service</name>
     <description>Demo order project for seata</description>
 
