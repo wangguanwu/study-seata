@@ -19,7 +19,7 @@ public interface StorageMapper {
      * @param commodityCode
      * @return
      */
-    @Select("select id, commodity_code, count from storage_tbl where commodity_code = #{commodityCode}")
+    @Select("select id, commodity_code, count from stock_tbl where commodity_code = #{commodityCode}")
     Storage findByCommodityCode(@Param("commodityCode") String commodityCode);
 
 
@@ -29,7 +29,7 @@ public interface StorageMapper {
      * @param count
      * @return
      */
-    @Update("update storage_tbl set count = count - #{count} where commodity_code = #{commodityCode}")
+    @Update("update stock_tbl set count = count - #{count} where commodity_code = #{commodityCode}")
     int reduceStorage(@Param("commodityCode") String commodityCode,
                       @Param("count") Integer count);
 

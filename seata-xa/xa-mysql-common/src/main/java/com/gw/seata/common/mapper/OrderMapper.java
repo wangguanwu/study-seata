@@ -32,6 +32,6 @@ public interface OrderMapper {
      * @param status
      * @return
      */
-    @Update("update order_tbl set status #{status} where id = #{id}")
+    @Update("update order_tbl set status = #{status} where id = #{id}")
     Integer updateOrderStatus(@Param("id") Integer id, @Param("status") int status);
 }

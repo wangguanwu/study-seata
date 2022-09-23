@@ -43,10 +43,9 @@ logging:
 
 seata:
   enabled: true
-
   data-source-proxy-mode: XA
   application-id: ${spring.application.name}
-  tx-service-group: default
+  tx-service-group: default_tx_group
   registry:
     type: nacos
     nacos:
@@ -55,6 +54,7 @@ seata:
       namespace:
       group: SEATA_GROUP
 
+
   config:
     type: nacos
     nacos:
@@ -62,6 +62,7 @@ seata:
       namespace: seata-ns
       group: SEATA_GROUP
       data-id: seataServer.properties
+
 
 management:
   endpoints:

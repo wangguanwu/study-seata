@@ -21,8 +21,8 @@ public class StorageController {
     }
 
     @RequestMapping("/deduct")
-    public Boolean deduct(String commodityCode, Integer code) {
-        storageService.deduct(commodityCode, code);
+    public Boolean deduct(String commodityCode, Integer count) {
+        storageService.deduct(commodityCode, count);
         return true;
     }
 }
