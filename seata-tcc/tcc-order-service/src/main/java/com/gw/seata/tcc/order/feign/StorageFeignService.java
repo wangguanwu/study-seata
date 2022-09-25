@@ -15,6 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface StorageFeignService {
 
     @RequestMapping(path = "/deduct")
-    Boolean deduct(@RequestParam("commodityCode") String commodityCode,
+    Boolean  deduct(@RequestParam("commodityCode") String commodityCode,
                    @RequestParam("count") Integer count);
 }

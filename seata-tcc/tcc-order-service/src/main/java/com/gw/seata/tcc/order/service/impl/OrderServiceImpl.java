@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public Order saveOrder(OrderVo orderVo, @BusinessActionContextParameter(paramName = "orderId")Long orderId)  {
+    public Order prepareSaveOrder(OrderVo orderVo, @BusinessActionContextParameter(paramName = "orderId")Long orderId)  {
         Order order = new Order();
         order.setId(orderId);
         order.setUserId(orderVo.getUserId());
@@ -51,7 +51,7 @@ public class OrderServiceImpl implements OrderService {
                 requireNonNull(actionContext.getActionContext("orderId")).toString());
         Integer status = orderMapper.updateOrderStatus(orderId, OrderStatus.SUCCESS.getValue());
         log.info("更新订单Id: {} {}", orderId, status > 0 ? "成功" : "失败");
-        return false;
+        return true;
     }
 
     @Override
@@ -62,6 +62,6 @@ public class OrderServiceImpl implements OrderService {
         Integer updateOrderRecord = orderMapper.updateOrderStatus(orderId,OrderStatus.FAIL.getValue());
         log.info("更新订单id:{} {}", orderId, updateOrderRecord > 0 ? "成功" : "失败");
 
-        return false;
+        return true;
     }
 }

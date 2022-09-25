@@ -41,7 +41,6 @@ logging:
     com.gw.seata: debug
 
 seata:
-  enabled: true
   application-id: ${spring.application.name}
   tx-service-group: default_tx_group
   registry:
@@ -56,7 +55,7 @@ seata:
     type: nacos
     nacos:
       server-addr: 127.0.0.1:8848
-      namespace: seata-ns
+      namespace: seata-namespace
       group: SEATA_GROUP
       data-id: seataServer.properties
 

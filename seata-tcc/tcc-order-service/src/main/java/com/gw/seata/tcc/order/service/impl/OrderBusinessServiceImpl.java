@@ -44,7 +44,7 @@ public class OrderBusinessServiceImpl implements OrderBusinessService {
         Long orderId = UUIDGenerator.generateUUID();
 
         //阶段一： 创建订单
-        Order order = orderService.saveOrder(orderVo,orderId);
+        Order order = orderService.prepareSaveOrder(orderVo,orderId);
 
         //扣减库存
         storageFeignService.deduct(orderVo.getCommodityCode(), orderVo.getCount());
